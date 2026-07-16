@@ -3,51 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的自我介紹</title>
+    <title>威威孟孟的專屬空間</title>
     <style>
+        /* 酷炫黑夜深色漸層背景 */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: #f8fafc;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
+        /* 科技感微發光卡片 */
         .card {
-            background: white;
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            max-width: 450px;
+            width: 100%;
+            padding: 40px 30px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.2);
+            transition: transform 0.3s ease;
         }
+
+        .card:hover {
+            transform: translateY(-5px); /* 滑鼠滑過卡片會微微浮起 */
+        }
+
+        /* 大頭貼動畫 */
         img {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             object-fit: cover;
+            border: 4px solid #6366f1;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
+            transition: transform 0.5s ease;
         }
-        h1 { color: #2c3e50; }
-        p { line-height: 1.6; }
-        .btn {
+
+        img:hover {
+            transform: rotate(360deg); /* 滑鼠滑過大頭貼會轉一圈，超酷！ */
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* 名字變成炫彩漸層字 */
+        }
+
+        .badge {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #3498db;
+            background: rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        /* 按鈕區塊改為直排，更好點擊 */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* 霓虹發光按鈕特效 */
+        .btn {
+            display: block;
+            padding: 14px;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        /* 藍色 IG 按鈕 */
+        .btn-ig {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+        }
+
+        /* 綠色自介按鈕 */
+        .btn-about {
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* 滑鼠滑過去按鈕放大、發光的動態特效 */
+        .btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+            filter: brightness(1.1);
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <img src="https://cdn.discordapp.com/attachments/1515251651311697931/1527294345718403252/f53afb3059a9a6c97cc78406cbbda960.jpg?ex=6a5a2333&is=6a58d1b3&hm=417225430f4159ace62c086f524302bf64af7c9a37c92538e19c718d463ffe1c&" alt="大頭貼">
-        <h1>嗨! 我是威威孟孟</h1>
-        <p>職稱 / 身份：國三生</p>
-        <p>我最喜歡看威威孟孟了我好想吃草莓顆粒</p>
-        <a href="https://www.instagram.com/wb._.69?igsh=ZXI0NndiNHQxdm96&utm_source=qr" class="btn" target="_blank">關注我的 IG</a>
-        <a href="about.html" class="btn" style="background: #2ecc71; margin-top: 10px;">點我看詳細自我介紹</a>
+        <!-- 你的 Discord 大頭貼 -->
+        <img src="https://cdn.discordapp.com/attachments/1515251651311697931/1527294345718403252/f53afb3059a9a6c97cc78406cbbda960.jpg?ex=6a5a2333&is=6a58d1b3&hm=417225430f4159ace62c086f524302bf64af7c9a37c92538e19c718d463ffe1c&" alt="威威孟孟的大頭貼">
+        
+        <h1>嗨！我是威威孟孟</h1>
+        <div class="badge">身份：國三生</div>
+        
+        <p class="bio">我最喜歡看威威孟孟了 好想吃草莓顆粒尬電<br>歡迎來到我的專屬極簡科技網頁！</p>
+        
+        <div class="btn-group">
+            <!-- 你的 IG 連結 -->
+            <a href="https://www.instagram.com/wb._.69?igsh=ZXI0NndiNHQxdm96&utm_source=qr" class="btn btn-ig" target="_blank">🔥 關注我的官方 IG</a>
+            
+            <!-- 跳轉到第二頁的連結 -->
+            <a href="about.html" class="btn btn-about">✨ 點我看詳細自我介紹 (內有秘密)</a>
+        </div>
     </div>
 
 </body>
